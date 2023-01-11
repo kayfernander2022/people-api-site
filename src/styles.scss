@@ -1,0 +1,79 @@
+// --------------------------
+// VARIABLES 
+// SASS is using variables in CSS.  It is optional and Reg CSS is just fine too.
+//must use $
+// --------------------------
+$maincolor: black;
+$contrastcolor: white;
+
+@mixin white-text-black-bg {//mixin allows reusable code. We are callin this mix white-text-black-bg and we are using it on the nav below on line 22 along with reg css.
+  color: $contrastcolor;
+  background-color: $maincolor;
+}
+
+@mixin black-test-white-bg {
+  color: $maincolor;
+  background-color: $contrastcolor;
+}
+
+// --------------------------
+// Header 
+//here we are nesting the div in the a tag a tag in the nav so all will get the mixin styles
+// --------------------------
+
+nav {
+  @include white-text-black-bg;
+  display: flex;
+  justify-content: flex-start;
+
+  a {
+    @include white-text-black-bg;
+    div {
+      margin: 10px;
+      font-size: large;
+    }
+  }
+}
+
+// --------------------------
+// Form
+// --------------------------
+
+section,
+div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+
+      &[type="submit"]:hover {
+        @include black-test-white-bg;
+      }
+    }
+  }
+}
+
+// --------------------------
+// button
+// --------------------------
+
+button#delete {
+  @include white-text-black-bg;
+  display: block;
+  margin: auto;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+// --------------------------
+// images
+// --------------------------
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  object-fit: cover;
+}
