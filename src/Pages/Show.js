@@ -16,14 +16,18 @@ function Show(props) {
         <input type="input" name="title" placeholder="person's title" />
         <input type="submit" value={`update ${person.name}`} />
       </Form>
+
       <h2>Delete Person</h2>
       <Form action={`/delete/${person._id}`} method="post">
       <input type="submit" value={`delete ${person.name}`} />
       </Form>
+
     </div>
   );
 }
 
 export default Show;
 
-//defaultValue being used in the update person will allow us to hold the original entry value in the input box when we choose a person. So we do not have to rememberit/re-enter it "optional" . line 14
+//  /update line13,  and /delete line21 from the <Form action=,  comes from the Route path=? in router.js
+
+//defaultValue being used in the update person field will allow us to hold the original entry value in the input box when we choose a person. So we do not have to remember it/re-enter it "optional line of code" . line 14

@@ -36,11 +36,11 @@ export const updateAction = async ({request, params}) => {
   const formData = await request.formData()
   // set up our new person to match schema
   const updatedPerson = {
-      name: formData.get("name"),//gets the name value from form
-      image: formData.get("image"),//gets the image value from form
-      title: formData.get("title")//gets the title value from form
+      name: formData.get("name"),//gets the "name" value from form
+      image: formData.get("image"),//gets the "image" value from form
+      title: formData.get("title")//gets the "title" value from form
   }
-  // Send new person to our API
+  // Once created Send new person to our API
   await fetch(URL + "/people/" + params.id, {
       method: "put",
       headers: {

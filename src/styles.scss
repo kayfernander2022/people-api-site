@@ -36,7 +36,7 @@ nav {
 }
 
 // --------------------------
-// Form
+// Form gg
 // --------------------------
 
 section,
@@ -56,7 +56,7 @@ div {
 }
 
 // --------------------------
-// button
+// button gg
 // --------------------------
 
 button#delete {
@@ -77,3 +77,16 @@ img {
   border-radius: 90px;
   object-fit: cover;
 }
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  grid-gap:16px;
+
+  .card{
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 10px
+  }
+}
+

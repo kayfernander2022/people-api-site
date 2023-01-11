@@ -1,3 +1,5 @@
+//couples the url to the components
+
 import {
   createBrowserRouter,//what creates the <Routes/> to the browser
   createRoutesFromElements,//helper that creates these browser <Routes/> with the elements inside of it. Instead of the array of objects method.
@@ -22,5 +24,4 @@ const router = createBrowserRouter(
   )
 )
 export default router
-
-//couples the url to the components
+//App is equal to Outlet in the App.js and Outlet allows the application to show all the children routes
