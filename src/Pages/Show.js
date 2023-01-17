@@ -4,10 +4,11 @@ function Show(props) {
   const person = useLoaderData();
 
   return (
-    <div className="person">
+    <div className="title">
       <h1>{person.name}</h1>
-      <h2>{person.title}</h2>
       <img src={person.image} alt={person.name} />
+      <h2>{person.title}</h2>
+      
 
       <h2>Update {person.name}</h2>
       <Form action={`/update/${person._id}`} method="post">
