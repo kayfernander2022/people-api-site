@@ -12,7 +12,7 @@ export const peopleLoader = async () => {
 }
 
 export const personLoader = async ({params}) => {//params is the id# in the url
-  const response = await fetch(URL + "/people/" + params.id )//params is the id# in the url
+  const response = await fetch(URL + "/people/" + params.id)//params is the id# in the url
   const person = await response.json()
   return person
 }
